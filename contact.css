@@ -150,4 +150,32 @@ body {
     max-width: 100%; /* Ensure all fields are the same width */
     box-sizing: border-box; /* Prevent padding from affecting width */
   }
+
+  /*header*/
+ :root {
+    --main-color: #c0392b;
+    --body-bg: #181616;
+    --box-bg: #221f1f;
+    --text-color: #ffffff;
+  
+    --nav-height: 60px;
+    --space-top: 30px;
+  }
+  
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  html {
+    font-size: 16px;
+  }
+  
+  body {
+    font-family: "Cairo", sans-serif;
+    background-color: var(--body-bg);
+    color: var(--text-color);
+  
+  }
+  
   
