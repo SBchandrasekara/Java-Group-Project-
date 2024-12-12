@@ -1,30 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ABC Cinema - Login</title>
-  <link rel="stylesheet" href="stylesheet.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
-  
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Login
+    </title>
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="grid.css">
+    <link rel="stylesheet" href="movies.css">
 </head>
+
 <body>
-  <header >
-   
-      <img src="Group 34.png" alt="ABC Cinema Logo" class="logo">
-      </div>
-     <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Movies</a></li>
-        <li><a href="#">Contact Us</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#" class="login-btn">Login</a></li>
-        <li><a href="#" class="signup-btn">Signup</a></li>
-      </ul>
-    </nav>
+
+    <!-- NAV -->
+    <header class="header">
+        <div class="logo-container">
+            <a href="/" class="logo-link">
+                <span class="logo-text">ABC</span>
+                <span class="logo-highlight">CINEMA</span>
+            </a>
+        </div>
+        
+        <nav class="nav-menu">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">
+                        Home
+                        <span class="underline"></span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="movies.html" class="nav-link">
+                        Movies
+                        <span class="underline"></span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        Contact Us
+                        <span class="underline"></span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        About Us
+                        <span class="underline"></span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+        <div class="user-section">
+            <div class="user-profile">
+                <img src="images/image (1).jpg" alt="User Profile" class="profile-pic">
+                <span class="user-name">Hello, Mr SB</span>
+                <span class="dropdown-arrow">▼</span>
+            </div>
+            <div class="notification-container">
+                <button class="notification-btn">
+                    <span class="notification-icon">🔔</span>
+                </button>
+            </div>
+        </div>
     </header>
+
+    <!-- END NAV -->
+   
 
   <div class="login-title">
     LOGIN
@@ -46,45 +94,4 @@
       </form>
     </div>
   </main>
-   <footer class="footer">
-    <div class="footer-content">
-      <!-- Logo -->
-      <div class="footer-logo">
-        <img src="Group 34.png" alt="ABC Cinema Logo">
-      </div>
-      
-      <!-- Navigation Links -->
-      <div class="footer-links">
-        <div class="footer-column">
-          <a href="#home">Home</a>
-          <a href="#movies">Movies</a>
-          <a href="#about">About ABC Cinema</a>
-          <a href="#contact">Contact Us</a>
-        </div>
-        <div class="footer-column">
-          <a href="#faq">FAQ</a>
-          <a href="#terms">Terms of Use</a>
-          <a href="#privacy">Privacy Policy</a>
-        </div>
-      </div>
-      
-      <!-- Social Media Icons -->
-      <div class="footer-social">
-        <br>
-        <br>
-        <br>
-        <p>Follow us on</p>
-        <img src="fb" alt="facebook"> <a href="#facebook"><i class="fab fa-facebook"></i></a>
-        <img src="insta" alt="instagram"><a href="#twitter"><i class="fab fa-twitter"></i></a>
-        <img src="twitter" alt="twitter"> <a href="#instagram"><i class="fab fa-instagram"></i></a>
-      </div>
-    </div>
-    
-    <!-- Copyright Section -->
-    <div class="footer-copyright">
-      <p> Copyright &copy; ABC CINEMA 2024</p>
-    </div>
-  </footer>
-  
-</body>
-</html>
+   
