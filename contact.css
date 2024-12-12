@@ -177,5 +177,16 @@ body {
     color: var(--text-color);
   
   }
+  a {
+    text-decoration: none;
+    color: unset;
+  }
   
+  img {
+    max-width: 100%;
+  }
+  
+  .main-color {
+    color: var(--main-color);
+  }
   
