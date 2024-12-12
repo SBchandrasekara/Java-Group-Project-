@@ -52,7 +52,7 @@ body {
   .additional-info {
     display: flex;
     justify-content: space-between;
-    color: rgba(255, 200, 255, 0.5); /* White color with 50% transparency */
+    color: rgba(255, 255, 255, 0.5); /* White color with 50% transparency */
     gap: 20px;
     margin-top: 30px;
   }
