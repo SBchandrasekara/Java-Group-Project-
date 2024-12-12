@@ -120,7 +120,7 @@ body {
     margin-bottom: 15px; /* Added uniform spacing below each text field */
   }
   input::placeholder, textarea::placeholder {
-    color: #ccc;
+    color: #888;
   }
   
   textarea {
