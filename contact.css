@@ -119,3 +119,11 @@ body {
     width: 100%; /* Ensure the width is the same for all fields */
     margin-bottom: 15px; /* Added uniform spacing below each text field */
   }
+  input::placeholder, textarea::placeholder {
+    color: #ccc;
+  }
+  
+  textarea {
+    resize: none;
+  }
+  
