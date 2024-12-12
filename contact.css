@@ -1,1 +1,58 @@
 
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif; /* Poppins Font Applied */
+    background: linear-gradient(180deg, #1c1c1c, #383636);
+    color: #fff;
+  }
+  
+  h1, h2, h3 {
+    margin: 0;
+    font-weight: 500;
+  }
+  p {
+    margin: 0;
+    line-height: 1.6;
+  }
+  
+  /* Contact Container */
+  .contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px;
+    gap: 20px;
+  }
+  
+  .contact-left {
+    width: 45%;
+  }
+  
+  .contact-left h1 {
+    font-size: 48px;
+    color: #fff;
+    margin-bottom: 0px;
+  }
+  .contact-left p, .contact-left strong {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.5); /* White color with 50% transparency */
+    margin-bottom: 10px;
+  }
+  
+  
+  .contact-left a.underline {
+    text-decoration: underline;
+    font-size: 16px;
+    font-weight: 200;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .additional-info {
+    display: flex;
+    justify-content: space-between;
+    color: rgba(255, 200, 255, 0.5); /* White color with 50% transparency */
+    gap: 20px;
+    margin-top: 30px;
+  }
