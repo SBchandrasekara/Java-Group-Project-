@@ -95,7 +95,6 @@ body {
     color: #707070;
     margin-bottom: 20px;
   }
-  
   form {
     display: flex;
     flex-direction: column;
@@ -106,4 +105,17 @@ body {
     justify-content: space-between;
     gap: 20px;
     margin-bottom: 15px;
+  }
+   
+  input, textarea {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #000000;
+    outline: none;
+    width: 100%; /* Ensure the width is the same for all fields */
+    margin-bottom: 15px; /* Added uniform spacing below each text field */
   }
