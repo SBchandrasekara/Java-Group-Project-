@@ -174,8 +174,7 @@ body {
   body {
     font-family: "Cairo", sans-serif;
     background-color: var(--body-bg);
-    color: var(--text-color);
-  
+    color: var(--text-color); 
   }
   a {
     text-decoration: none;
@@ -185,8 +184,17 @@ body {
   img {
     max-width: 100%;
   }
-  
   .main-color {
     color: var(--main-color);
+  }
+  
+.logo {
+    font-size: 2rem;
+    font-weight: 900;
+  }
+  .container {
+    max-width: 1920px;
+    padding: 0 40px;
+    margin: auto;
   }
   
