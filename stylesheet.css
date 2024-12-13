@@ -100,4 +100,24 @@
   }
 
   
+.signup-form {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.signup-form h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.signup-form p {
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+
   
