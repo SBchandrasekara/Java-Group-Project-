@@ -13,3 +13,10 @@ inputs.forEach(input => {
     if (input.id === 'message') input.setAttribute('placeholder', 'How can we help?');
   });
 });
+
+// Form submission 
+const form = document.getElementById('contact-form');
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  alert('Form submitted successfully!');
+});
