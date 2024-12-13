@@ -136,4 +136,49 @@
   background-color: #ffffff;
   color: #000000;
 }
+
+
+.signup-form button {
+  background-color: red;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.signup-form button:hover {
+  background-color: #ff4d4d;
+}
+
+.signup-form a {
+  color: red;
+  text-decoration: none;
+}
+
+.signup-form a:hover {
+  text-decoration: underline;
+}
+
+.horizontal-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: space;
+}
+
+.gender{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.mobile{
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.mobile-span{
+  background-color: #000000;
+  padding: 0.8rem;
+  border-radius:5px ;
+}
   
