@@ -104,7 +104,7 @@
   max-width: 500px;
   margin: 2rem auto;
   padding: 2rem;
-  background: #ffffff;
+  background: linear-gradient(90deg, #1B080C 0%, #7D1315 39%, #6A1113 57%, #1B080C 100%);
   border-radius: 10px;
   text-align: center;
 }
@@ -119,5 +119,21 @@
   font-size: 0.9rem;
 }
 
+.signup-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
 
+.signup-form input,
+.signup-form button {
+  padding: 0.8rem;
+  border-radius: 5px;
+  border: none;
+}
+
+.signup-form input {
+  background-color: #ffffff;
+  color: #000000;
+}
   
