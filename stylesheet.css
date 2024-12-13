@@ -162,7 +162,7 @@
 .horizontal-group {
   display: flex;
   gap: 1rem;
-  justify-content: space;
+  justify-content: space-between;
 }
 
 .gender{
@@ -177,7 +177,7 @@
 }
 
 .mobile-span{
-  background-color: #000000;
+  background-color: #3d3d3d;
   padding: 0.8rem;
   border-radius:5px ;
 }
