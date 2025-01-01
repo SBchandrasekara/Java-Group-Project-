@@ -120,3 +120,11 @@
             <div class="get-in-touch-form">
                 <h2><strong>Get In Touch</strong></h2>
                 <p>Feel Free To Reach Us At Any Time</p>
+
+                <% if (!successMessage.isEmpty()) { %>
+                    <p style="color: green;"><%= successMessage %></p>
+                <% } %>
+                <% if (!errorMessage.isEmpty()) { %>
+                    <p style="color: red;"><%= errorMessage %></p>
+                <% } %>
+                
