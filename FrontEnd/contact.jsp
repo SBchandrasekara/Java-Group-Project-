@@ -84,3 +84,27 @@
                     <span class="underline"></span>
                 </a>
             </li>
+            <li class="nav-item">
+                <a href="movie.jsp" class="nav-link">
+                    Movies
+                    <span class="underline"></span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="contact.jsp" class="nav-link">
+                    Contact Us
+                    <span class="underline"></span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="aboutus.jsp" class="nav-link">
+                    About Us
+                    <span class="underline"></span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    
+      
+
+</header>
