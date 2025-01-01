@@ -225,3 +225,13 @@
         </div>
     </div>
 </footer>
+    <!-- END FOOTER SECTION -->
+
+    <!-- COPYRIGHT SECTION -->
+    <div class="copyright">
+        ABC CINEMA
+    </div>
+
+<script src="js/contact.js"></script>
+</body>
+</html>
