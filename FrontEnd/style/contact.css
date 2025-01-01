@@ -122,3 +122,12 @@
     margin-top: 15px; 
     width: 25%;
   }
+
+  button.gradient-btn:hover {
+    background: linear-gradient(90deg, #831416, #D91E1E);
+  }
+  
+  input[type="text"], input[type="email"], input[type="tel"], textarea {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
