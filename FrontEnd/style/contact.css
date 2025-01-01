@@ -15,4 +15,17 @@
     color: #fff;
     margin-bottom: 0px;
   }
- 
+  .contact-left p, .contact-left strong {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.5); 
+    margin-bottom: 10px;
+  }
+  
+  
+  .contact-left a.underline {
+    text-decoration: underline;
+    font-size: 16px;
+    font-weight: 200;
+    color: #fff;
+    cursor: pointer;
+  }
