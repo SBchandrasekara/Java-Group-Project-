@@ -583,10 +583,7 @@
     </div>
     <!-- END COMING SOON SECTION -->
 
-
-    
-
-   <!-- FOOTER SECTION -->
+ <!-- FOOTER SECTION -->
     <footer class="section">
         <div class="container">
             <div class="row">
@@ -687,3 +684,6 @@
 </body>
 
 </html>
+    
+
+  
