@@ -40,3 +40,31 @@
             // Establish connection
             Class.forName("com.mysql.cj.jdbc.Driver");
             connection = DriverManager.getConnection(dbURL, dbUser, dbPassword);
+
+            // Insert query
+            String query = "INSERT INTO contacts (first_name, last_name, email, phone, message) VALUES (?, ?, ?, ?, ?)";
+            statement = connection.prepareStatement(query);
+            statement.setString(1, firstName);
+            statement.setString(2, lastName);
+            statement.setString(3, email);
+            statement.setString(4, phone);
+            statement.setString(5, message);
+
+            // Execute query
+            int rowsInserted = statement.executeUpdate();
+            if (rowsInserted > 0) {
+                successMessage = "Thank you for contacting us! We will get back to you soon.";
+            }
+        } catch (Exception e) {
+            errorMessage = "Error occurred while submitting your request. Please try again.";
+            e.printStackTrace();
+        } finally {
+            try {
+                if (statement != null) statement.close();
+                if (connection != null) connection.close();
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+        }
+    }
+%>
