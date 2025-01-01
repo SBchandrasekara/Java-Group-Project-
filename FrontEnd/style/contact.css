@@ -108,3 +108,17 @@
   textarea {
     resize: none;
   }
+  button.gradient-btn {
+    background: linear-gradient(90deg, #831416, #D91E1E);
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin: 15px auto; 
+    margin-top: 15px; 
+    width: 25%;
+  }
