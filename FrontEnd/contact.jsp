@@ -159,3 +159,25 @@
                          <a href="https://www.facebook.com" class="social-item">
                             <i class="bx bxl-facebook"></i>
                         </a>
+                        <a href="https://twitter.com" class="social-item">
+                            <i class="bx bxl-twitter"></i>
+                        </a>
+                        <a href="https://instagram.com" class="social-item">
+                            <i class="bx bxl-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-8 col-md-6 col-sm-12">
+                <div class="row">
+                    <div class="col-3 col-md-6 col-sm-6">
+                        <div class="content">
+                            <p><b>ABC Cinema</b></p>
+                            <ul class="footer-menu">
+                                <li><a href="aboutus.html">About us</a></li>
+                                <li><a href="profile details.html">My profile</a></li>
+                                <li><a href="movies.html">Pricing plans</a></li>
+                                <li><a href="contact.html">Contacts</a></li>
+                            </ul>
+                        </div>
+                    </div>
