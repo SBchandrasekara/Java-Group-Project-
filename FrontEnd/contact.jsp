@@ -68,3 +68,11 @@
         }
     }
 %>
+<!-- NAV -->
+<header class="header">
+    <div class="logo-container">
+        <a href="home.jsp" class="logo-link">
+            <span class="logo-text">ABC</span>
+            <span class="logo-highlight">CINEMA</span>
+        </a>
+    </div>
