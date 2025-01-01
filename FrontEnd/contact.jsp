@@ -76,3 +76,11 @@
             <span class="logo-highlight">CINEMA</span>
         </a>
     </div>
+    <nav class="nav-menu">
+        <ul class="nav-list">
+            <li class="nav-item">
+                <a href="home.jsp" class="nav-link">
+                    Home
+                    <span class="underline"></span>
+                </a>
+            </li>
