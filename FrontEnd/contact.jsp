@@ -13,4 +13,30 @@
     <link rel="stylesheet" href="style/movies.css">
     <!-- Include all the existing styles and links -->
 </head>
+
 <body>
+    <%  
+    // Initialize variables for form submission messages
+    String successMessage = "";
+    String errorMessage = "";
+
+    // Check if form is submitted
+    if (request.getParameter("submit") != null) {
+        String firstName = request.getParameter("first-name");
+        String lastName = request.getParameter("last-name");
+        String email = request.getParameter("email");
+        String phone = request.getParameter("phone");
+        String message = request.getParameter("message");
+
+        Connection connection = null;
+        PreparedStatement statement = null;
+
+        try {
+            // Database connection details
+            String dbURL = "jdbc:mysql://localhost:3308/abc_db";
+            String dbUser = "root";
+            String dbPassword = "12345678";
+
+            // Establish connection
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            connection = DriverManager.getConnection(dbURL, dbUser, dbPassword);
