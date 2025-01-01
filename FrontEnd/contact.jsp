@@ -142,3 +142,20 @@
         </div>
     </div>
 </main>
+
+  <!-- FOOTER SECTION -->
+  <footer class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-4 col-md-6 col-sm-12">
+                <div class="content">
+                    <a href="index.html" class="logo">
+                        <i class='main-color'></i>ABC<span class="main-color">|</span>Cinema
+                    </a>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut veniam ex quos hic id nobis beatae earum sapiente! Quod ipsa exercitationem officiis non error illum minima iusto et. Dolores, quibusdam?
+                    </p>
+                    <div class="social-list">
+                         <a href="https://www.facebook.com" class="social-item">
+                            <i class="bx bxl-facebook"></i>
+                        </a>
