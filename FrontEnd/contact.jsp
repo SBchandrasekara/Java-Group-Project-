@@ -127,4 +127,18 @@
                 <% if (!errorMessage.isEmpty()) { %>
                     <p style="color: red;"><%= errorMessage %></p>
                 <% } %>
-                
+
+                <form id="contact-form" method="post" action="contact.jsp">
+                    <div class="form-row">
+                        <input type="text" name="first-name" placeholder="First name" required>
+                        <input type="text" name="last-name" placeholder="Last name" required>
+                    </div>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="tel" name="phone" placeholder="Phone Number" required>
+                    <textarea name="message" placeholder="How can we help?" rows="5" required></textarea>
+                    <button type="submit" name="submit" class="gradient-btn">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
