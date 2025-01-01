@@ -108,3 +108,15 @@
       
 
 </header>
+<main>
+    <div class="contact-container-1">
+        <!-- Left Section: Contact Details -->
+        <div class="contact-left">
+            <!-- Existing Contact Information -->
+        </div>
+
+        <!-- Right Section: Get In Touch Form -->
+        <div class="contact-right">
+            <div class="get-in-touch-form">
+                <h2><strong>Get In Touch</strong></h2>
+                <p>Feel Free To Reach Us At Any Time</p>
