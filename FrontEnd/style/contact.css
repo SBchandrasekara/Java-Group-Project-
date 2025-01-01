@@ -1,1 +1,18 @@
-
+.contact-container-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px;
+    gap: 20px;
+  }
+  
+  .contact-left {
+    width: 45%;
+  }
+  
+  .contact-left h1 {
+    font-size: 48px;
+    color: #fff;
+    margin-bottom: 0px;
+  }
+ 
