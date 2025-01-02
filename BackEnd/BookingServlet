@@ -43,3 +43,27 @@ public class BookingServlet extends HttpServlet {
             stmt.setString(3, seatNumbers);
             stmt.setString(4, date);
             stmt.setString(5, time);
+
+            // Execute the update
+            int rowsAffected = stmt.executeUpdate();
+            
+            if (rowsAffected > 0) {
+                // Successfully booked, redirect to confirmation page or show success message
+                response.sendRedirect("payment.jsp");
+            } else {
+                // Failed to book, show an error message
+                response.sendRedirect("error.jsp");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            response.sendRedirect("error.jsp");
+        } finally {
+            try {
+                if (stmt != null) stmt.close();
+                if (conn != null) conn.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
