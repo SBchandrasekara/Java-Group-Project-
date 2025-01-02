@@ -39,3 +39,22 @@ public class SignUp extends HttpServlet {
         String nic = request.getParameter("nic");
         String address = request.getParameter("address");
         String password = request.getParameter("password");
+
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+
+            connection = DriverManager.getConnection(JDBC_URL, JDBC_USER, JDBC_PASSWORD);
+
+            // Create a PreparedStatement to execute the query
+            preparedStatement = connection.prepareStatement(INSERT_USER_SQL);
+            preparedStatement.setString(1, firstName);
+            preparedStatement.setString(2, lastName);
+            preparedStatement.setString(3, email);
+            preparedStatement.setString(4, gender);
+            preparedStatement.setString(5, mobile);
+            preparedStatement.setString(6, nic);
+            preparedStatement.setString(7, address);
+            preparedStatement.setString(8, password);
