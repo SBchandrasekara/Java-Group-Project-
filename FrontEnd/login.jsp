@@ -18,3 +18,23 @@
       <link rel="stylesheet" href="style/movies.css">
 </head>
 <body>
+
+    <main>
+        <div class="login-box">
+          <h2>Welcome Back!</h2>
+          <p>Please enter your credentials to access the Work Portal.</p>
+          <form action="Login" method="post">
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <div class="options">
+              <label class="remember-me">
+                <input type="checkbox" name="rememberMe"> Remember Me
+              </label>
+              <a href="forgotPassword.jsp" class="forgot-password">Forgot Password?</a>
+            </div>
+            <button type="submit" class="login-button">Login</button>
+            <p class="new-member">New Member? <a href="signup.jsp" class="signup-link">Sign Up</a></p>
+          </form>
+        </div>
+      </main>
+        
