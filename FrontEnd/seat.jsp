@@ -256,3 +256,32 @@
         <div class="seat" data-row="A" data-col="40" title="Available"><i class="fas fa-chair"></i></div>
     </div>
    
+</section>
+        <div class="movie-info"> 
+            
+        <!-- Booking Form -->
+        <form method="POST" action="<%= request.getContextPath() %>/CompleteBookingServlet">
+         <input type="hidden" name="selected_seats" id="selectedSeats">
+            <label >Ticket Price</label>
+            <label id="price">$500</label>
+            <label >Total</label>
+            <label id="totalPrice" >$0</label>
+         
+           
+            <input type="hidden" name="selected_seats" id="selectedSeats">
+            <label for="quantity">Number of Tickets:</label>
+            <label id="ticketCount">0</label>
+            <label for="email">Email Address:</label>
+            <input type="email" name="email" placeholder="Enter your email" required>
+            <button type="submit" class="btn">Complete Booking</button>
+               <div id="paypal-button-container" ></div>
+             
+        </form>
+       
+        <br>
+        
+        </div>
+       
+    </div>
+ 
+</div>
