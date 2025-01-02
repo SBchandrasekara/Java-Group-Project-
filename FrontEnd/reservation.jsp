@@ -72,3 +72,21 @@
     </header>
 
     <!-- END NAV -->
+    <div class="reservation-container">
+      <header class="reservation-header">
+        <h1>RESERVATION SUMMARY</h1>
+      </header>
+      <main class="reservation-content">
+      
+        <div class="confirmation-box">
+          <h3>Thank You!</h3>
+          <p>
+            Your reservation is confirmed.<br>
+            Please pay at the movie pass counter to collect your tickets.
+          </p>
+          <a href="home.jsp">
+            <button type="button">Done</button>
+        </a>
+        </div>
+      </main>
+    </div>
