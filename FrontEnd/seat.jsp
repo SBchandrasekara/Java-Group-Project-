@@ -174,3 +174,21 @@
      <script src="https://www.paypal.com/sdk/js?client-id=Ae_v1-FbGVrMCk2Sg2okfDDC829hfgG8FKi9TQtqPnX2NUbYodf3XY2sKQVY336FGCpDZyRoQpv8wKJY&currency=USD"></script>
 </head>
 <body>
+ <header class="header">
+        <div class="logo-container">
+            <a href="/" class="logo-link">
+                <span class="logo-text">ABC</span>
+                <span class="logo-highlight">CINEMA</span>
+            </a>
+        </div>
+        <nav class="nav-menu">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="home.jsp" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="movie.jsp" class="nav-link">Movies</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Contact Us</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
