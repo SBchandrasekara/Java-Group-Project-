@@ -375,3 +375,72 @@
     ABC CINEMA
 </div>
 <!-- END COPYRIGHT SECTION -->
+<script>
+    // JavaScript for handling seat selection
+     document.addEventListener("DOMContentLoaded", () => {
+            const seats = document.querySelectorAll('.seat:not(.occupied)'); // Select only available seats
+            const selectedSeatsInput = document.getElementById('selectedSeats');
+            const ticketCount = document.getElementById('ticketCount');
+            const totalPrice = document.getElementById('totalPrice');
+            const pricePerTicket = 500; // Price per ticket
+
+            const selectedSeats = new Set(); // Track selected seats
+
+            seats.forEach(seat => {
+                seat.addEventListener('click', () => {
+                    const row = seat.dataset.row;
+                    const col = seat.dataset.col;
+                    const seatId = `${row}-${col}`;
+
+                    if (seat.classList.contains('selected')) {
+                        // If the seat is already selected, deselect it
+                        seat.classList.remove('selected');
+                        selectedSeats.delete(seatId); // Remove from selected seats
+                    } else {
+                        // If the seat is not selected, select it
+                        seat.classList.add('selected');
+                        selectedSeats.add(seatId); // Add to selected seats
+                    }
+
+                    // Update hidden input and ticket summary
+                    selectedSeatsInput.value = Array.from(selectedSeats).join(','); // Update selected seats input
+                    updateTicketSummary(); // Update ticket count and total price
+                });
+            });
+
+            // Function to update the ticket summary (ticket count and total price)
+            function updateTicketSummary() {
+                const count = selectedSeats.size; // Get the number of selected seats
+                const totalAmount = count * pricePerTicket; // Calculate total price
+
+                ticketCount.textContent = count; // Update the ticket count display
+                totalPrice.textContent = `$${totalAmount.toFixed(2)}`; // Update the total price
+            }
+        });
+        
+        // PayPal button integration
+        paypal.Buttons({
+            createOrder: function(data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: document.getElementById('totalPrice').innerText.replace('$', '')
+                        }
+                    }]
+                });
+            },
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    alert('Payment Successful!');
+                    // Handle successful payment (e.g., update booking status)
+                });
+            },
+            onError: function(err) {
+                console.error('PayPal Error:', err);
+                alert('There was an error with your payment. Please try again.');
+            }
+        }).render('#paypal-button-container');
+</script>
+
+</body>
+</html>
