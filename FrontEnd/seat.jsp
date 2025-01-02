@@ -103,5 +103,74 @@
         button.btn:hover {
             background-color: #555;
         }
-  
- 
+
+        .screen {
+            background-color: #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+         .seating-section {
+        text-align: center;
+        margin: 2rem auto;
+        max-width: 800px;
+    }
+    .seats {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        gap: 10px;
+        justify-content: center;
+    }
+    .seat {
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+        color: white;
+        background-color: #4caf50;
+        border-radius: 5px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .seat.selected {
+        background-color: #f39c12;
+    }
+    .seat.occupied {
+        background-color: #f39c12;
+        cursor: not-allowed;
+    }
+        .legend {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .legend div {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .legend .box {
+            width: 20px;
+            height: 20px;
+            border-radius: 5px;
+        }
+        .paypal-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        .paypal-button {
+            margin-top: 20px;
+        }
+        
+    </style>
+    <!-- PayPal SDK -->
+     <script src="https://www.paypal.com/sdk/js?client-id=Ae_v1-FbGVrMCk2Sg2okfDDC829hfgG8FKi9TQtqPnX2NUbYodf3XY2sKQVY336FGCpDZyRoQpv8wKJY&currency=USD"></script>
+</head>
+<body>
