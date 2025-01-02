@@ -31,3 +31,77 @@
         header .logo img {
             width: 120px;
         }
+
+        /* Checkout Page */
+        .checkout-container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+           
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .checkout-box {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .movie-info {
+           display: grid;
+           justify-content: center;
+        }
+
+        .movie-info img {
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .price-summary {
+            flex: 1;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table th, table td {
+            padding: 8px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        select, input[type="number"], input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        button.btn {
+            background-color: #333;
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button.btn:hover {
+            background-color: #555;
+        }
+  
+ 
