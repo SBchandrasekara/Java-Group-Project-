@@ -10,9 +10,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
-    <!-- Box Icons -->
     <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">    
-    <!-- App CSS -->
     <link rel="stylesheet" href="style/login.css">
     <link rel="stylesheet" href="style/grid.css">
       <link rel="stylesheet" href="style/movies.css">
@@ -37,4 +35,7 @@
           </form>
         </div>
       </main>
-        
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="js/app.js"></script>
+    </body>
+    </html>        
