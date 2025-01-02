@@ -58,3 +58,32 @@ public class SignUp extends HttpServlet {
             preparedStatement.setString(6, nic);
             preparedStatement.setString(7, address);
             preparedStatement.setString(8, password);
+
+                // Execute the query
+            int rowsInserted = preparedStatement.executeUpdate();
+
+            // If signup is successful redirect to home
+            if (rowsInserted > 0) {
+                response.sendRedirect("home.jsp");
+            } else {
+                out.println("<h1>Signup failed. Please try again.</h1>");
+            }
+
+        } catch (ClassNotFoundException e) {
+            out.println("<h1>Database driver not found!</h1>");
+            e.printStackTrace();
+        } catch (SQLException e) {
+            out.println("<h1>Error connecting to the database!</h1>");
+            e.printStackTrace();
+        } finally {
+            // Close resources
+            try {
+                if (preparedStatement != null) preparedStatement.close();
+                if (connection != null) connection.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
+
