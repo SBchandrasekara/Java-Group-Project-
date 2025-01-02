@@ -41,4 +41,28 @@
   	<description></description>
   	<servlet-class>SignUpServlet.SignUp</servlet-class>
   </servlet>
-  
+    <servlet-mapping>
+  	<servlet-name>AddMovieServlet</servlet-name>
+  	<url-pattern>/AddMovieServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AdminServlet</servlet-name>
+  	<url-pattern>/AdminServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>BookingServlet</servlet-name>
+  	<url-pattern>/BookingServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>CompleteBookingServlet</servlet-name>
+  	<url-pattern>/CompleteBookingServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Login</servlet-name>
+  	<url-pattern>/Login</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>SignUp</servlet-name>
+  	<url-pattern>/SignUp</url-pattern>
+  </servlet-mapping>
+</web-app>
