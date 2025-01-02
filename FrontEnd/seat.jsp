@@ -369,3 +369,9 @@
     </div>
 </footer>
 <!-- END FOOTER SECTION -->
+
+<!-- COPYRIGHT SECTION -->
+<div class="copyright">
+    ABC CINEMA
+</div>
+<!-- END COPYRIGHT SECTION -->
