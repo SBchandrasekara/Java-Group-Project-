@@ -1,1 +1,92 @@
+package SignUpServlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+
+@WebServlet("/LoginServlet")
+public class Login extends HttpServlet {
+
+    private static final long serialVersionUID = 1L;
+
+    // JDBC URL username and password of the MySQL database
+    private static final String JDBC_URL = "jdbc:mysql://localhost:3308/abc_db";
+    private static final String JDBC_USER = "root";
+    private static final String JDBC_PASSWORD = "12345678";
+
+    // SQL query to check user credentials
+    private static final String SELECT_USER_SQL = "SELECT * FROM users WHERE email = ? AND password = ?";
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+        // Set response content type
+        response.setContentType("text/html");
+        PrintWriter out = response.getWriter();
+
+        // Fetch form data
+        String email = request.getParameter("email");
+        String password = request.getParameter("password");
+
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+
+            connection = DriverManager.getConnection(JDBC_URL, JDBC_USER, JDBC_PASSWORD);
+
+            preparedStatement = connection.prepareStatement(SELECT_USER_SQL);
+            preparedStatement.setString(1, email);
+            preparedStatement.setString(2, password);
+
+            // Execute the query
+            resultSet = preparedStatement.executeQuery();
+
+                       if (resultSet.next()) {
+                // If login is successful store user data in session
+                HttpSession session = request.getSession();
+                session.setAttribute("userId", resultSet.getInt("id"));
+                session.setAttribute("firstName", resultSet.getString("first_name"));
+                session.setAttribute("lastName", resultSet.getString("last_name"));
+                session.setAttribute("email", resultSet.getString("email"));
+
+                // Redirect to home.jsp 
+                response.sendRedirect("home.jsp");
+
+            } else {
+                // If login failed, show an error message
+                out.println("<h1>Invalid credentials! Please try again.</h1>");
+            }
+
+        } catch (ClassNotFoundException e) {
+            out.println("<h1>Database driver not found!</h1>");
+            e.printStackTrace();
+        } catch (SQLException e) {
+            out.println("<h1>Error connecting to the database!</h1>");
+            e.printStackTrace();
+        } finally {
+            // Close resources
+            try {
+                if (resultSet != null) resultSet.close();
+                if (preparedStatement != null) preparedStatement.close();
+                if (connection != null) connection.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
 
