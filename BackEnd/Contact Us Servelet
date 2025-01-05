@@ -12,21 +12,44 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 
-  <servlet>
-  	<servlet-name>AdminServlet</servlet-name>
-  	<display-name>AdminServlet</display-name>
-  	<description></description>
-  	<servlet-class>AdminServlet.AdminServlet</servlet-class>
-  </servlet>
-  <servlet>
- 	<servlet-name>BookingServlet</servlet-name>
-  	<display-name>BookingServlet</display-name>
-  	<description></description>
-  	<servlet-class>BookingServlet.BookingServlet</servlet-class>
-  </servlet>
-  <servlet>
-  	<servlet-name>CompleteBookingServlet</servlet-name>
-  	<display-name>CompleteBookingServlet</display-name>
+
+
+<%  
+// Initialize variables for form submission messages
+String successMessage = "";
+String errorMessage = "";
+// Check if form is submitted
+if (request.getParameter("submit") != null) {
+    String firstName = request.getParameter("first-name");
+    String lastName = request.getParameter("last-name");
+    String email = request.getParameter("email");
+    String phone = request.getParameter("phone");
+    String message = request.getParameter("message");
+
+    Connection connection = null;
+    PreparedStatement statement = null;
+
+ try {
+        // Database connection details
+        String dbURL = "jdbc:mysql://localhost:3308/abc_db";
+        String dbUser = "root";
+        String dbPassword = "12345678";
+
+        // Establish connection
+        Class.forName("com.mysql.cj.jdbc.Driver");
+        connection = DriverManager.getConnection(dbURL, dbUser, dbPassword);
+
+        // Insert query
+        String query = "INSERT INTO contacts (first_name, last_name, email, phone, message) VALUES (?, ?, ?, ?, ?)";
+        statement = connection.prepareStatement(query);
+        statement.setString(1, firstName);
+        statement.setString(2, lastName);
+        statement.setString(3, email);
+        statement.setString(4, phone);
+        statement.setString(5, message);
+
+
+
   	<description></description>
   	<servlet-class>CompleteBookingServlet.CompleteBookingServlet</servlet-class>
   </servlet>
