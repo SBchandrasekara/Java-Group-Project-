@@ -18,6 +18,7 @@ import jakarta.servlet.http.HttpServletResponse;
 // Initialize variables for form submission messages
 String successMessage = "";
 String errorMessage = "";
+
 // Check if form is submitted
 if (request.getParameter("submit") != null) {
     String firstName = request.getParameter("first-name");
@@ -50,43 +51,21 @@ if (request.getParameter("submit") != null) {
 
 
 
-  	<description></description>
-  	<servlet-class>CompleteBookingServlet.CompleteBookingServlet</servlet-class>
-  </servlet>
-  <servlet>
-  	<servlet-name>Login</servlet-name>
-  	<display-name>Login</display-name>
-  	<description></description>
-  	<servlet-class>SignUpServlet.Login</servlet-class>
-  </servlet>
-  <servlet>
-  	<servlet-name>SignUp</servlet-name>
-  	<display-name>SignUp</display-name>
-  	<description></description>
-  	<servlet-class>SignUpServlet.SignUp</servlet-class>
-  </servlet>
-    <servlet-mapping>
-  	<servlet-name>AddMovieServlet</servlet-name>
-  	<url-pattern>/AddMovieServlet</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-  	<servlet-name>AdminServlet</servlet-name>
-  	<url-pattern>/AdminServlet</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-  	<servlet-name>BookingServlet</servlet-name>
-  	<url-pattern>/BookingServlet</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-  	<servlet-name>CompleteBookingServlet</servlet-name>
-  	<url-pattern>/CompleteBookingServlet</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-  	<servlet-name>Login</servlet-name>
-  	<url-pattern>/Login</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-  	<servlet-name>SignUp</servlet-name>
-  	<url-pattern>/SignUp</url-pattern>
-  </servlet-mapping>
-</web-app>
+        // Execute query
+        int rowsInserted = statement.executeUpdate();
+        if (rowsInserted > 0) {
+            successMessage = "Thank you for contacting us! We will get back to you soon.";
+        }
+    } catch (Exception e) {
+        errorMessage = "Error occurred while submitting your request. Please try again.";
+        e.printStackTrace();
+    } finally {
+        try {
+            if (statement != null) statement.close();
+            if (connection != null) connection.close();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+    }
+}
+%>
