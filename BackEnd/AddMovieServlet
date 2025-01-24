@@ -1,1 +1,64 @@
+package AddMovieServlet;
+
+import java.io.*;
+import java.sql.*;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+public class AddMovieServlet extends HttpServlet {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String title = request.getParameter("title");
+        String image = request.getParameter("image");
+        float rating = Float.parseFloat(request.getParameter("rating"));
+        int duration = Integer.parseInt(request.getParameter("duration"));
+        String ageRating = request.getParameter("age_rating");
+
+        String url = "jdbc:mysql://localhost:3308/abc_db"; // Replace with your DB details
+        String user = "root"; // Database username
+        String password = "12345678"; // Database password
+
+        Connection conn = null;
+        PreparedStatement ps = null;
+
+        try {
+            // Load the MySQL JDBC driver (only needed for versions prior to 8.x)
+             Class.forName("com.mysql.cj.jdbc.Driver");
+
+            // Establishing connection
+            conn = DriverManager.getConnection(url, user, password);
+
+            // SQL query to insert movie
+            String sql = "INSERT INTO movies (title, image, rating, duration, age_rating) VALUES (?, ?, ?, ?, ?)";
+            ps = conn.prepareStatement(sql);
+            ps.setString(1, title);
+            ps.setString(2, image);
+            ps.setFloat(3, rating);
+            ps.setInt(4, duration);
+            ps.setString(5, ageRating);
+
+            // Executing the query
+            int rows = ps.executeUpdate();
+            if (rows > 0) {
+                response.sendRedirect("movie.jsp");  // Redirect to the movie listing page after successful insertion
+            } else {
+                response.getWriter().println("<h3>Failed to add movie</h3>");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            response.getWriter().println("<h3>Error: " + e.getMessage() + "</h3>");
+        } catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+            try {
+                if (ps != null) ps.close();
+                if (conn != null) conn.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
 
